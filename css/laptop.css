@@ -1,0 +1,481 @@
+/*
+      HỆ THỐNG CÁCH CHỌN KHOẢNG TRẮNG
+      SPACING SYSTEM (px)
+      2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+      FONT SIZE SYSTEM (px)
+      10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+        */
+
+* {
+  /* Cho phép bao hàm padding và border vào total width và total height của phần tử
+  Hay cho phép chúng ta thêm padding, border.. mà không cần phải thêm width của phần tử */
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.bg-grey {
+  background: #f7f7f7;
+}
+
+/* THẺ ẢNH CHO BANNER */
+#banner {
+  position: relative;
+}
+
+.text-banner {
+  /* Thay đổi vị trí text trên banner sao cho phù hợp */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+}
+
+section > .container {
+  width: 1170px;
+  margin: auto;
+  display: block;
+  /* padding: 30px 50px; */
+}
+
+/* THANH NAV-BAR */
+#nav-bar {
+  text-align: center;
+  /* background-color: #f7f7f7; */
+}
+
+/* tạo kiểu cho thanh NAV nằm ngang theo trục chính */
+.container-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+}
+
+/* Điều chỉnh phần (Lý lịch) và (Chứng chỉ) sao cho hài hòa với avatar */
+.ic--lylich {
+  margin: auto 128px auto 40px;
+}
+
+.ic--chungchi {
+  margin: auto 40px auto 128px;
+}
+
+/* Tạo màu cho icon trong thanh NAV */
+.icon-user,
+.icon-doc-text-inv,
+.icon-mail-alt,
+.icon-star-1 {
+  color: #199cdb;
+  padding-right: 8px;
+}
+
+/* Tạo kiểu cho liên kết trong thanh NAV */
+a:link,
+a:visited {
+  font-size: 14px;
+  text-transform: uppercase; /*Viết HOA*/
+  text-decoration: none; /*Bỏ gạch chân cho kiên kết*/
+  padding: auto;
+  color: #333;
+}
+
+.avatar {
+  border-radius: 50%; /*Bo viền tròn cho avatar*/
+  position: absolute; /*Đặt làm giá trị tuyệt đối để Avatar đè lên banner*/
+  border: 5px solid #fff;
+}
+
+/* MỤC TIÊU - THÔNG TIN CÁ NHÂN */
+
+/* Tạo 2 cột căn đều cho mục tiêu và thông tin */
+.muctieu-thongtin {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Căn chỉnh cho cột mục tiêu nghề nghiệp */
+.muctieu {
+  background-color: #f8f9fa;
+  padding: 48px 24px 20px 20px;
+}
+
+/* Căn chỉnh cho cột thông tin cá nhân */
+.thongtin {
+  background-color: #f1f3f5;
+  padding: 48px 24px 20px 20px;
+}
+
+/* Bố cục cho các ICON trong cột thông tin cá nhân */
+.icon-thongtin {
+  display: flex; /* Cho các icon trải dài một hàng*/
+  color: #199cdb;
+  width: 30px;
+  height: 30px;
+  margin-top: 16px;
+}
+
+/* tạo kiểu cho h3 */
+.muctieu-thongtin h3 {
+  margin-bottom: 24px;
+  color: #333;
+}
+
+/* Tạo kiểu cho p */
+.muctieu > p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* Tạo kiểu cho danh sách */
+.thongtin > ul {
+  font-size: 14px;
+  line-height: 1.7;
+  list-style: none; /* Bỏ đánh dấu đầu danh sách */
+  padding-left: 0;
+  color: #333;
+}
+
+/* KINH NGHIỆM - HỌC VẤN - HOẠT ĐỘNG - SỞ THÍCH - NGÔN NGỮ - KỸ NĂNG */
+
+.container > .grid {
+  /* Tạo 3 cột */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  gap: 20px 20px;
+}
+
+/* KINH NGHIỆM - HỌC VẤN - HOẠT ĐỘNG */
+.kinhnghiem,
+.hocvan,
+.hoatdong,
+.sothich,
+.ngonngu,
+.kynang {
+  /* Tạo đường vèn cho mỗi ô */
+  border: 1px solid #e9ecef;
+}
+
+/* Tạo kiểu cho tiêu đề và icon trong thông tin - nghề nghiệp */
+.icon-kinhnghiem,
+.icon-hocvan,
+.icon-hoatdong,
+.icon-sothich1,
+.icon-ngonngu,
+.icon-kynang {
+  display: flex;
+  padding: 24px 24px 30px 0;
+}
+
+.h1-kinhnghiem,
+.h1-hocvan,
+.h1-hoatdong {
+  /* Cho tiêu đề trong mục thông tin chiếm 75% hàng */
+  flex: 75%;
+  padding-left: 24px;
+}
+
+.icon-toolbox,
+.i-pencil,
+.i-hoatdong {
+  /* Cho Icon trong mục thông tin chiếm 25% hàng */
+  flex: 25%;
+  text-align: center;
+  font-size: 30px;
+  color: #868e96;
+}
+
+.ul-kinhnghiem,
+.ul-hocvan,
+.ul-hoatdong,
+.icon-sothich2 {
+  /* Căn chỉnh cho mục thông tin nghề nghiệp */
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 8px 32px 0 48px;
+  list-style: none; /* Bỏ ký tự ul */
+  position: relative;
+}
+
+/* Căn chỉnh mục ngôn ngữ và kỹ năng */
+.nn,
+.kn {
+  padding: 8px 32px 0 24px;
+}
+
+.li-cham {
+  /* Tạo khoảng cách cho những ý nhỏ trong mục kinh nghiệm, hoạt động... */
+  margin-top: 24px;
+}
+
+/* TẠO KIỂU CHO "HIỆN TẠI" */
+span {
+  background-color: #199cdb;
+  color: #fff;
+  padding: 1px 8px; /* căn chỉnh */
+  border-radius: 6px; /* bo viền */
+}
+
+/* TẠO CHẤM XANH TRƯỚC <LI> */
+.chamxanh:before {
+  content: "";
+  background-color: #199cdb;
+  border: solid #fff;
+  border-radius: 50%; /* bo viền tròn */
+  position: absolute; /* Đặt làm giá trị tuyệt đối */
+  top: auto; /* Sao cho thu phóng màn hình vẫn giữ được đúng vị trí trước ul */
+  left: 20px; /* căn chỉnh */
+  width: 10px;
+  height: 10px;
+  transform: translate(
+    0,
+    50%
+  ); /* Cho chấm xuống đúng vị trí mong muốn, trục Y */
+}
+
+.li-cham:before {
+  content: "";
+  background-color: #199cdb;
+  border: solid #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: auto;
+  left: 20px;
+  width: 10px;
+  height: 10px;
+  transform: translate(0, 50%);
+}
+
+.h1-sothich,
+.h1-ngonngu,
+.h1-kynang {
+  /* Cho tiêu đề trong mục thông tin chiếm 75% hàng */
+  flex: 75%;
+  padding-left: 24px;
+}
+
+.i-telescope,
+.i-mic,
+.i-tools-2 {
+  /* Cho Icon trong mục thông tin chiếm 25% hàng */
+  flex: 25%;
+  text-align: center;
+  font-size: 30px;
+  color: #868e96;
+}
+
+/* Tạo kiểu cho Icon SỞ THÍCH */
+.icon-sothich2 {
+  /* Cho các icon dàn trải một hàng */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+  padding-left: 20px;
+}
+
+/* Tạo kiểu cho Icon trong SỞ THÍCH */
+.ic-st {
+  border: solid #199cdb;
+  border-radius: 50%;
+  color: #199cdb;
+  padding: 14px;
+}
+
+/* Tạo kiểu cho mục text trong SỞ THÍCH */
+.st > p {
+  font-size: 14px;
+  margin-top: 4px;
+  padding: 4px;
+}
+
+/* Tạo kiểu thanh cho NGÔN NGỮ, KỸ NĂNG */
+.sp {
+  background-color: #868e96;
+  /* Căn chỉnh theo chiều rộng, cao thì phải có thuộc tính inline-block*/
+  display: inline-block;
+  height: 3px;
+  margin-right: 10px;
+  width: 40px;
+  margin-bottom: 16px;
+}
+
+/* Tạo màu cho thanh chỉ số */
+.sp1 {
+  background-color: #199cdb;
+}
+
+/* Tạo kiểu cho text Kỹ Năng */
+.kn {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* CHỨNG CHỈ - GIẢI THƯỞNG */
+#certificate > .container {
+  margin: 48px auto;
+  padding-top: 24px;
+  display: block;
+  /* padding: 30px 50px; */
+}
+
+.chungchi-giaithuong {
+  /* Chia khối thành 2 cột */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.web,
+.javascript,
+.data {
+  /* Trong các khối nhỏ hơn chia thành 2 cột */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 24px 24px 24px 0;
+}
+
+.web,
+.javascript {
+  /* Tạo đường vèn */
+  border-bottom: 1px solid #d6c08d;
+}
+
+.javascript {
+  /* Tạo đường vèn trái */
+  padding-right: 0;
+  border-left: 1px solid #d6c08d;
+  padding-left: 16px;
+}
+
+.text-ccgt {
+  /* Tạo kiểu cho văn bản */
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.text-chungchi {
+  /* Tạo kiểu cho văn bản */
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+/* DỰ ÁN */
+#project > .container {
+  margin: auto;
+  display: block;
+  /* padding: 30px 50px; */
+}
+
+.container-duan {
+  /* Tạo 3 cột */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  justify-content: center;
+  margin: auto;
+  /* padding: 30px 50px; */
+}
+
+.h3-duan {
+  /* Căn lề cho tiêu đề h3 */
+  padding: 24px auto 24px 0;
+  margin-bottom: 24px;
+}
+
+/* Tạo đường viền cho 3 cột */
+.cv-canhan,
+.quanly-thucung,
+.xem-tintuc {
+  border: solid #e9ecef;
+}
+
+.thongtin-duan {
+  /* Chi cột trong từng mục */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-bottom: solid 1px #e9ecef;
+  gap: 14px;
+  padding: 0 16px 16px 16px;
+  font-size: 14px;
+}
+
+/* Tạo kiểu cho Icon */
+.icon-user-1,
+.icon-lamp {
+  font-size: 15px;
+}
+
+/* Tạo kiểu cho tiêu đề Dự Án */
+.text-duan {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 16px;
+  border-bottom: solid 1px #e9ecef;
+}
+
+/* Tạo kiểu cho div 2021 */
+.style-2021 {
+  display: inline-block;
+  background-color: #199cdb;
+  color: #fff;
+  padding: 4px 8px 4px 8px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+/* Tạo kiểu cho hàng trong bảng */
+td {
+  text-align: left;
+  border-bottom: solid 1px #e9ecef;
+  padding: 16px;
+  font-size: 14px;
+  padding-left: 10px;
+}
+
+/* Bỏ đường viền cho phần tử cuối */
+.td-affter {
+  border: none;
+}
+
+/* FOOTER */
+/* Tạo kiểu cho Icon */
+.footer-icon {
+  background-color: #199cdb;
+  color: #fff;
+  border: solid #199cdb;
+  border-radius: 50%;
+  padding: 4px;
+  margin-right: 8px;
+}
+
+/* Tạo kiểu cho ul */
+.ul-footer {
+  list-style: none;
+  text-align: center;
+  padding: 24px;
+  margin: 16px 0 0 0;
+}
+
+/* Dàn li thành hàng */
+.ul-footer > li {
+  display: inline-block;
+  margin-right: 24px;
+  font-size: 12px;
+}
+
+/* Phần tử con cuối cùng */
+.ul-footer > li:last-child {
+  margin-right: 0;
+}

@@ -1,0 +1,82 @@
+@media (max-width: 768px) {
+  /* THANH NAV */
+  /* Điều chỉnh cho Avatar khi thu về kích thước của tablet thì biến mất */
+  .avatar {
+    display: none;
+  }
+
+  /* Điều chỉnh phần (Lý lịch) và (Chứng chỉ) sao cho phù hợp với tablet */
+  .ic--lylich {
+    margin-right: 25px;
+  }
+
+  .ic--chungchi {
+    margin-left: 25px;
+  }
+
+  /* MỤC TIÊU - THÔNG TIN CÁ NHÂN */
+
+  /* KINH NGHIỆM - HỌC VẤN - HOẠT ĐỘNG - SỞ THÍCH - NGÔN NGỮ - KỸ NĂNG */
+  .container > .grid {
+    /* Tạo layout với grid thành 2 cột */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 20px;
+  }
+
+  /* Căn chỉnh các cột cho phù hợp với khung hình Tablet */
+  .kinhnghiem {
+    grid-row: span 2;
+  }
+
+  .hocvan {
+    grid-row: span 1;
+  }
+
+  .hoatdong {
+    grid-row: span 2;
+  }
+
+  .sothich {
+    grid-row: span 1;
+  }
+
+  .ngonngu {
+    grid-row: span 1;
+  }
+
+  .kynang {
+    grid-row: span 2;
+  }
+
+  /* CHỨNG CHỈ - GIẢI THƯỞNG */
+  .web,
+  .javascript,
+  .data {
+    /* Dàn các xuống cho phù hợp với tablet */
+    display: block;
+    padding: 24px 24px 24px 0;
+  }
+
+  .javascript {
+    padding-left: 16px;
+  }
+
+  /* DỰ ÁN */
+  .thongtin-duan {
+    display: grid;
+    grid-template-areas:
+      "a b"
+      "c d";
+  }
+  .thongtin-duan > .style-2021 {
+    grid-area: a;
+    text-align: center;
+  }
+  .thongtin-duan > .funix {
+    grid-area: b;
+  }
+  .thongtin-duan > .developer {
+    grid-area: d;
+  }
+}

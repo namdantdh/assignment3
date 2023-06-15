@@ -1,0 +1,85 @@
+@media (max-width: 500px) {
+  /* THANH NAV */
+  /* Dàn các item xuống theo chiều dọc */
+  .container-nav {
+    display: block;
+    height: 150px;
+  }
+
+  /* Điều chỉnh padding và margin cho các item */
+  .ic--thongtin {
+    padding-top: 15px;
+    margin: 0 275px 8px 20px;
+  }
+
+  .ic--lylich {
+    margin: 0 300px 8px 20px;
+  }
+
+  .ic--chungchi {
+    margin: 0 270px 8px 20px;
+  }
+
+  .ic--duan {
+    margin: 0 295px 15px 13px;
+  }
+
+  /* MỤC TIÊU - THÔNG TIN CÁ NHÂN */
+  .muctieu-thongtin {
+    display: block;
+  }
+
+  /* KINH NGHIỆM - HỌC VẤN - HOẠT ĐỘNG - SỞ THÍCH - NGÔN NGỮ - KỸ NĂNG */
+
+  section > .container {
+    width: 100%;
+    margin: auto;
+    display: block;
+    padding: 30px 50px;
+  }
+
+  .container > .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 20px 20px;
+  }
+
+  /* CHỨNG CHỈ - GIẢI THƯỞNG */
+  .chungchi-giaithuong {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .web,
+  .javascript,
+  .data {
+    /* Tạo đường viền chân */
+    border-bottom: 1px solid #d6c08d;
+  }
+
+  .javascript {
+    /* Bỏ đường viền trái */
+    border-left: 0;
+  }
+
+  /* DỰ ÁN */
+  .container-duan {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    justify-content: center;
+    margin: auto;
+    /* padding: 30px 50px; */
+  }
+
+  .thongtin-duan {
+    /* display: block; */
+    display: grid;
+    /* grid-template-columns: 50px 50px 50px; */
+    /* grid-template-rows: 1fr; */
+    justify-content: space-between;
+  }
+
+  /* FOOTER */
+}

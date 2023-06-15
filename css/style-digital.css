@@ -1,0 +1,188 @@
+/* LAPTOP */
+#digital-cv > .container {
+  width: 1170px;
+  margin: auto;
+  display: block;
+  padding: 30px 50px;
+  background-color: blue;
+}
+
+/* Tạo layout 2 hàng và 4 cột */
+.container > .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: blue;
+}
+
+.goals,
+.team,
+.timeline,
+.scopes,
+.primary {
+  background-color: #f1f3f5;
+  padding: 24px;
+  height: 100%;
+}
+
+/* Tạo goals theo yêu cầu */
+.goals {
+  grid-column: 1 / span 2;
+  padding: 24px;
+}
+
+/* Tạo timeline theo yêu cầu */
+.timeline {
+  grid-row: 1 / -1;
+  grid-column: 4;
+}
+
+/* Tạo scopes theo yêu cầu */
+.scopes {
+  grid-column: 1 / span 2;
+}
+
+/* Tạo kiểu cho h3 */
+h3 {
+  padding: 10px 10px 10px 0;
+  margin: 0;
+  border-bottom: 1px solid #bbb;
+  color: blue;
+}
+
+p {
+  margin: auto;
+}
+
+/* GOALS */
+.goals-1 {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #bbb;
+  padding: 20px;
+}
+
+.icon-goals {
+  padding: 0 20px;
+}
+
+/* SCOPER */
+.scope-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.in-out {
+  padding: 0 20px 20px 0;
+}
+
+.in-out > p {
+  padding: 20px 0 20px 0;
+}
+
+/* TEAM */
+.team-1,
+.primary-1 {
+  display: flex;
+  flex-direction: row;
+  padding: 24px 0 0 0;
+}
+
+.icon-team {
+  padding: 20px;
+}
+
+/* TIMELINE */
+.timeline-1 {
+  display: flex;
+  flex-direction: row;
+  margin: 24px 0 24px 0;
+}
+
+.number {
+  padding: 5px;
+  border-radius: 50%;
+  background-color: violet;
+  margin: 5px;
+  color: #fff;
+  height: 40px;
+}
+
+.text-timeline {
+  margin-left: 5px;
+  border-bottom: dotted 1px #14a1ed;
+}
+
+/* TABLET */
+
+@media (max-width: 768px) {
+  .container > .grid {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+  }
+
+  /* Tạo kiểu cho các vùng chứa phù hợp với yêu cầu */
+  .goals,
+  .team,
+  .timeline,
+  .scopes,
+  .primary {
+    background-color: #f1f3f5;
+    padding: 24px;
+    height: 100%;
+    margin-bottom: 20px;
+  }
+
+  .goals-1 {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #bbb;
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .icon-goals,
+  .icon-team {
+    text-align: center;
+  }
+
+  .scope-1 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .team-1,
+  .primary-1 {
+    display: flex;
+    flex-direction: column;
+    padding: 24px 0 0 0;
+  }
+
+  .timeline-1 {
+    display: flex;
+    flex-direction: column;
+    margin: 24px 0 24px 0;
+  }
+
+  .number {
+    text-align: center;
+    width: 40px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 500px) {
+  #digital-cv > .container {
+    width: 100%;
+    margin: auto;
+    display: block;
+    padding: 30px 50px;
+    background-color: blue;
+  }
+}
